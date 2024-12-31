@@ -7,18 +7,22 @@ import Wrapper from "../Wrapper";
 const StatisticsSection = () => {
   const [isInView, setIsInView] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("stats");
+  const checkIfInView = () => {
+    const element = document.getElementById("stats");
+    if (element) {
       const position = element.getBoundingClientRect();
-
       if (position.top <= window.innerHeight && position.bottom >= 0) {
         setIsInView(true);
       }
-    };
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  useEffect(() => {
+    // Check on initial load
+    checkIfInView();
+    // Add scroll listener
+    window.addEventListener("scroll", checkIfInView);
+    return () => window.removeEventListener("scroll", checkIfInView);
   }, []);
 
   const stats = [
@@ -55,8 +59,8 @@ const StatisticsSection = () => {
       className="py-10 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200"
     >
       <Wrapper>
-        <div className=" mx-auto px-6">
-          <h2 className=" text-3xl lg:text-6xl font-extrabold text-center text-gray-800 mb-12 tracking-wide">
+        <div className="mx-auto px-6">
+          <h2 className="text-3xl lg:text-6xl font-extrabold text-center text-gray-800 mb-12 tracking-wide">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#7B0B22] to-[#c73955]">
               Our Achievements
             </span>
@@ -78,13 +82,13 @@ const StatisticsSection = () => {
                       {stat.prefix && <span>{stat.prefix}</span>}
                       {isInView ? (
                         <>
-                        <CountUp
-                          start={0}
-                          end={stat.value}
-                          duration={3}
-                          separator=","
-                        />
-                        +
+                          <CountUp
+                            start={0}
+                            end={stat.value}
+                            duration={3}
+                            separator=","
+                          />
+                          +
                         </>
                       ) : (
                         0

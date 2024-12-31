@@ -21,7 +21,7 @@ const HeroSection = () => {
             </div>
           </div>
           <Image
-            src="/images/home/hero-img.png"
+            src="/images/home/hero-img.svg"
             alt="hero img"
             width={500}
             height={300}

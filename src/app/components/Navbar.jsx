@@ -135,7 +135,7 @@ const Navbar = () => {
               overlay={servicesMenu}
               trigger={["hover"]}
               onVisibleChange={(visible) => setDropdownOpen(visible)}
-              placement="bottomCenter"
+              placement="bottom"
               overlayStyle={{
                 width: "50%", // Set the width of the dropdown
                 marginLeft: "25%", // Center the dropdown by applying margin
