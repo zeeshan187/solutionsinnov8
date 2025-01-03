@@ -9,6 +9,7 @@ import Image from "next/image";
 import Wrapper from "./Wrapper";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import Link from "next/link";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -106,7 +107,7 @@ const Navbar = () => {
       <Wrapper>
         <div className="flex items-center justify-between ">
           {/* Logo */}
-          <div className="text-xl font-bold z-30">
+          <Link href="/" className="text-xl font-bold z-30">
             <Image
               src="/images/navbar/logo.svg"
               alt="logo img"
@@ -121,16 +122,16 @@ const Navbar = () => {
               height={50}
               className="flex md:hidden w-[50px]"
             />
-          </div>
+          </Link>
 
           {/* Center Menu (Desktop) */}
           <div className="hidden md:flex space-x-6 z-30">
-            <a href="#home" className="hover:text-blue-500">
+            <Link href="/" className="hover:text-blue-500">
               Home
-            </a>
-            <a href="#about" className="hover:text-blue-500">
+            </Link>
+            <Link href="/about" className="hover:text-blue-500">
               About
-            </a>
+            </Link>
             <Dropdown
               overlay={servicesMenu}
               trigger={["hover"]}
@@ -141,20 +142,20 @@ const Navbar = () => {
                 marginLeft: "25%", // Center the dropdown by applying margin
               }}
             >
-              <a
-                href="#services"
+              <Link
+                href="/services"
                 className="flex items-center hover:text-blue-500"
                 onClick={(e) => e.preventDefault()}
               >
                 Services {dropdownOpen ? <UpOutlined /> : <DownOutlined />}
-              </a>
+              </Link>
             </Dropdown>
-            <a href="#courses" className="hover:text-blue-500">
+            <Link href="/courses" className="hover:text-blue-500">
               Courses
-            </a>
-            <a href="#contact" className="hover:text-blue-500">
+            </Link>
+            <Link href="/contact" className="hover:text-blue-500">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Right Button (Desktop) */}
@@ -199,16 +200,16 @@ const Navbar = () => {
                   width: "100%", // Full width dropdown in mobile view
                 }}
               >
-                <a
-                  href="#services"
-                  className="flex items-center block mb-4 text-xl hover:text-blue-500"
+                <Link
+                  href="/services"
+                  className="flex items-center mb-4 text-xl hover:text-blue-500"
                   onClick={(e) => {
                     e.preventDefault();
                     handleMenuItemClick(); // Hide menu on click
                   }}
                 >
                   Services {dropdownOpen ? <UpOutlined /> : <DownOutlined />}
-                </a>
+                </Link>
               </Dropdown>
               <a
                 href="#courses"
@@ -217,13 +218,13 @@ const Navbar = () => {
               >
                 Courses
               </a>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="text-xl mb-4 hover:text-blue-500"
                 onClick={handleMenuItemClick}
               >
                 Contact
-              </a>
+              </Link>
 
               {/* Schedule Meeting (Mobile) */}
               <Button

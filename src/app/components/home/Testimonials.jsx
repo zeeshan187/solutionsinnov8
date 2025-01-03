@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-gray-50 py-5 lg:py-16 px-4 sm:px-8 lg:px-16">
+    <div className="bg-gradient-to-r from-blue-50 to-gray-50 py-5 lg:py-16">
       <Wrapper>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-40 items-center">
         {/* Left Block */}
@@ -119,7 +119,7 @@ const TestimonialsSection = () => {
             ]}
           >
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="p-4">
+              <div key={index} >
                 <div className="bg-white rounded-lg shadow-md p-6 !min-h-[300px] flex flex-col items-center text-center transition-transform transform hover:scale-105 duration-300">
                   <div className="w-20 h-20 rounded-full overflow-hidden mb-4">
                     <img

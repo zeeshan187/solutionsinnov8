@@ -54,7 +54,7 @@ const OurServices = () => {
   return (
     <div className="py-12 bg-gray-50">
       <Wrapper>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <h2 className=" text-3xl lg:text-6xl font-extrabold text-center text-gray-800 mb-12 tracking-wide">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#7B0B22] to-[#c73955]">
               Our Services
