@@ -200,8 +200,8 @@ const Navbar = () => {
                   width: "100%", // Full width dropdown in mobile view
                 }}
               >
-                <Link
-                  href="/services"
+                <a
+                  href="#services"
                   className="flex items-center mb-4 text-xl hover:text-blue-500"
                   onClick={(e) => {
                     e.preventDefault();
@@ -209,15 +209,15 @@ const Navbar = () => {
                   }}
                 >
                   Services {dropdownOpen ? <UpOutlined /> : <DownOutlined />}
-                </Link>
+                </a>
               </Dropdown>
-              <a
-                href="#courses"
+              <Link
+                href="/courses"
                 className="text-xl mb-4 hover:text-blue-500"
                 onClick={handleMenuItemClick}
               >
                 Courses
-              </a>
+              </Link>
               <Link
                 href="/contact"
                 className="text-xl mb-4 hover:text-blue-500"
