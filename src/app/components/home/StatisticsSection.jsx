@@ -28,7 +28,7 @@ const StatisticsSection = () => {
   const stats = [
     {
       title: "Clients",
-      value: 1200,
+      value: 65,
       icon: "fas fa-users",
       color: "bg-blue-500",
     },
@@ -40,14 +40,14 @@ const StatisticsSection = () => {
     },
     {
       title: "Revenue",
-      value: 1000000,
+      value: 100000,
       icon: "fas fa-dollar-sign",
       color: "bg-yellow-500",
       prefix: "$",
     },
     {
-      title: "Employees",
-      value: 350,
+      title: "Glorious Years",
+      value: 4,
       icon: "fas fa-briefcase",
       color: "bg-red-500",
     },

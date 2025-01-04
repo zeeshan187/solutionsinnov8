@@ -228,7 +228,7 @@ const Navbar = () => {
 
               {/* Schedule Meeting (Mobile) */}
               <Button
-                className="bg_red_color min-w-[150px] h-[50px] text-white font-semibold rounded-xl mt-4"
+                className="bg_red_color text-base min-w-[150px] h-[50px] text-white font-semibold rounded-xl mt-4"
                 onClick={handleMenuItemClick}
               >
                 Schedule Meeting
