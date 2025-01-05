@@ -3,7 +3,7 @@
 import { Card, Button } from "antd";
 import { useState } from "react";
 import Image from "next/image";
-import Wrapper from "../Wrapper";
+import Wrapper from "../shared/Wrapper";
 
 const servicesData = [
   {

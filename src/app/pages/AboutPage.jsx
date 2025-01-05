@@ -5,10 +5,10 @@ import TeamSection from "../components/about/TeamSection";
 import TestimonialsSection from "../components/home/Testimonials";
 import ContactUs from "../components/home/ContactUs";
 import AboutUsSection from "../components/home/AboutUsSection";
-import HeroSection from "../components/HeroSection";
-import Loader from "../components/Loader";
-import Navbar from "../components/Navbar";
-import Footer from "../components/home/Footer";
+import HeroSection from "../components/shared/HeroSection";
+import Loader from "../components/shared/Loader";
+import Navbar from "../components/shared/Navbar";
+import Footer from "../components/shared/Footer";
 
 const AboutPage = () => {
   const [loading, setLoading] = useState(true);

@@ -1,14 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Loader from "../components/Loader";
+import Loader from "../components/shared/Loader";
 import HeroSection from "../components/home/HeroSection";
 import StatisticsSection from "../components/home/StatisticsSection";
 import AboutUsSection from "../components/home/AboutUsSection";
 import OurServices from "../components/home/OurServices";
 import TestimonialsSection from "../components/home/Testimonials";
 import ContactUs from "../components/home/ContactUs";
-import Navbar from "../components/Navbar";
-import Footer from "../components/home/Footer";
+import Navbar from "../components/shared/Navbar";
+import Footer from "../components/shared/Footer";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);

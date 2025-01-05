@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import dynamic from "next/dynamic";
 import "antd/dist/reset.css";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import Wrapper from "../Wrapper";
+import Wrapper from "../shared/Wrapper";
 
 const Carousel = dynamic(() => import("antd").then((mod) => mod.Carousel), { ssr: false });
 

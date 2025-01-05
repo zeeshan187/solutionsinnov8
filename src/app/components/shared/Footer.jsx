@@ -1,7 +1,7 @@
 // components/Footer.js
 import { Row, Col } from "antd";
 import Image from "next/image";
-import Wrapper from "../Wrapper";
+import Wrapper from "./Wrapper";
 
 export default function Footer() {
   return (

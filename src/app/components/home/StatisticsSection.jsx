@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "antd";
 import CountUp from "react-countup";
-import Wrapper from "../Wrapper";
+import Wrapper from "../shared/Wrapper";
 
 const StatisticsSection = () => {
   const [isInView, setIsInView] = useState(false);

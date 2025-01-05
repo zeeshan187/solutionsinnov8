@@ -1,5 +1,5 @@
 import React from 'react'
-import Wrapper from '../Wrapper'
+import Wrapper from '../shared/Wrapper'
 import Image from 'next/image'
 
 const Clients = () => {

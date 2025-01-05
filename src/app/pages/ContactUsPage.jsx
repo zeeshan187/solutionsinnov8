@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from "react";
 import ContactUs from "../components/home/ContactUs";
 import TestimonialsSection from "../components/home/Testimonials";
-import HeroSection from "../components/HeroSection";
-import Loader from "../components/Loader";
-import Navbar from "../components/Navbar";
-import Footer from "../components/home/Footer";
+import HeroSection from "../components/shared/HeroSection";
+import Loader from "../components/shared/Loader";
+import Navbar from "../components/shared/Navbar";
+import Footer from "../components/shared/Footer";
 
 const ContactUsPage = () => {
   const [loading, setLoading] = useState(true);

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HeroSection = ({ title, subtitle }) => {
   return (
-    <div className="relative bg-[#7B0B22] text-white h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+    <div className="relative bg-[#7B0B22] text-white min-h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-30">
         <Image
