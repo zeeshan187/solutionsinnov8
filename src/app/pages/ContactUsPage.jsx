@@ -1,16 +1,13 @@
-"use client";
+"use client"
 import React, { useEffect, useState } from "react";
-import Clients from "../components/about/Clients";
-import TeamSection from "../components/about/TeamSection";
-import TestimonialsSection from "../components/home/Testimonials";
 import ContactUs from "../components/home/ContactUs";
-import AboutUsSection from "../components/home/AboutUsSection";
+import TestimonialsSection from "../components/home/Testimonials";
 import HeroSection from "../components/HeroSection";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Footer from "../components/home/Footer";
 
-const AboutPage = () => {
+const ContactUsPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,14 +22,11 @@ const AboutPage = () => {
         <Loader />
       ) : (
         <>
-          <Navbar />
+        <Navbar />
           <HeroSection
-            title="Empowering Your Vision"
-            subtitle="Discover Solutions Innov8 – a cutting-edge agency driving digital success. We help brands like yours thrive in the online world and build a future of endless opportunities."
+            title="Get in Touch with Us"
+            subtitle="We’re here to help you bring your ideas to life. Reach out to Solutions Innov8 and let's discuss how we can drive your digital success."
           />
-          <AboutUsSection />
-          <TeamSection />
-          <Clients />
           <TestimonialsSection />
           <ContactUs />
           <Footer />
@@ -42,4 +36,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default ContactUsPage;

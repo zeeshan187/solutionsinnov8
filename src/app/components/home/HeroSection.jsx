@@ -1,33 +1,100 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import Wrapper from "../Wrapper";
 import Image from "next/image";
 import { Button } from "antd";
 
 const HeroSection = () => {
+  // Variants for animations
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div>
+    <div className="relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#7B0B22] via-[#450087] to-[#170055] animate-gradient"></div>
+
       <Wrapper>
-        <div className="flex flex-col lg:flex-row items-center min-h-[calc(100vh-85px)] w-full justify-between">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariant}
+          className="flex flex-col lg:flex-row items-center min-h-[calc(100vh-85px)] w-full justify-between relative z-10"
+        >
+          {/* Text Section */}
           <div className="flex flex-col w-full lg:w-[45%] gap-5 mt-5 lg:mt-0">
-            <h2 className="text-3xl lg:text-6xl lg:!leading-[70px] font-semibold text-center lg:text-start">All-in-One Web, App, and Social Solutions</h2>
-            <p className="basic_text text-center lg:text-start">
+            <motion.h2
+              variants={itemVariant}
+              className="text-3xl lg:text-6xl lg:!leading-[70px] font-semibold text-center lg:text-start text-white"
+            >
+              All-in-One Web, App, and Social Solutions
+            </motion.h2>
+            <motion.p
+              variants={itemVariant}
+              className=" text-center lg:text-start text-white"
+            >
               Receive guidance on digital strategy, direct access to design and
               development experts, and a platform that’s successfully launched
               over 100+ apps, websites, and social campaigns globally
-            </p>
-            <div className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start">
-              <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-[#7B0B22] text-white font-semibold bg_red_color">Explore Our Services</Button>
-              <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-[#7B0B22] font-semibold text-[#7B0B22] ">Get Started Today</Button>
-            </div>
+            </motion.p>
+            <motion.div
+              variants={itemVariant}
+              className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start"
+            >
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-white text-white font-semibold bg-transparent">
+                  Explore Our Services
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-white font-semibold text-white bg-[#7B0B22]">
+                  Get Started Today
+                </Button>
+              </motion.div>
+            </motion.div>
           </div>
-          <Image
-            src="/images/home/hero-img.svg"
-            alt="hero img"
-            width={500}
-            height={300}
+
+          {/* Image Section with Parallax Effect */}
+          <motion.div
+            initial={{ y: 40 }}
+            animate={{ y: [0, -30, 0]}}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+            whileHover={{ scale: 1.05 }}
             className="w-full lg:w-[50%]"
-          />
-        </div>
+          >
+            <Image
+              src="/images/home/hero-img.svg"
+              alt="hero img"
+              width={500}
+              height={300}
+              className="w-full"
+            />
+          </motion.div>
+        </motion.div>
       </Wrapper>
     </div>
   );
