@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HeroSection = ({ title, subtitle }) => {
   return (
-    <div className="relative bg-[#7B0B22] text-white min-h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+    <div className="relative bg-[#7B0B22] text-white min-h-[50vh] md:min-h-[70vh] py-5 md:py-0 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-30">
         <Image
@@ -20,7 +20,7 @@ const HeroSection = ({ title, subtitle }) => {
 
       {/* Content */}
       <div className="relative text-center max-w-5xl px-6 animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
+        <h1 className="text-3xl mt-3 md:mt-0 md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
           {title}
         </h1>
         {subtitle && (
