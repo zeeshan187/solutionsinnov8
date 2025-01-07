@@ -11,13 +11,14 @@ const ContactUsPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
-    <div className="mt-[85px]">
+    <div className="mt-[83px]">
       {loading ? (
         <Loader />
       ) : (

@@ -13,14 +13,14 @@ export default function Loader() {
             display: flex;
             justify-content: center;
             align-items: center;
-            // background: rgba(255, 255, 255, 0.8);
-            background: #7B0B22;
+            background: white;
+            // background: #7B0B22;
             z-index: 1000;
           }
   
           .spinner {
             border: 8px solid #f3f3f3;
-            border-top: 8px solid #3498db;
+            border-top: 8px solid #7B0B22;
             border-radius: 50%;
             width: 70px;
             height: 70px;

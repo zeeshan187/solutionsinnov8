@@ -68,7 +68,7 @@ const StatisticsSection = () => {
           <Row gutter={[32, 32]} justify="center">
             {stats.map((stat, index) => (
               <Col xs={24} sm={12} md={6} key={index}>
-                <div className="flex flex-col items-center bg-white shadow-xl rounded-xl p-8 transform transition duration-500 hover:scale-105">
+                <div className=" flex flex-col items-center bg-white shadow-xl rounded-xl p-8 transform transition duration-500 hover:scale-105">
                   <div
                     className={`w-16 h-16 flex items-center justify-center text-white text-3xl rounded-full ${stat.color} shadow-md mb-6`}
                   >

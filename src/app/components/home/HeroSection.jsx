@@ -77,7 +77,7 @@ const HeroSection = () => {
           {/* Image Section with Parallax Effect */}
           <motion.div
             initial={{ y: 40 }}
-            animate={{ y: [0, -30, 0]}}
+            animate={{ y: [20, -20, 20]}}
             transition={{
               duration: 3,
               ease: "easeInOut",
