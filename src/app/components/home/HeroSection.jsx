@@ -92,6 +92,7 @@ const HeroSection = () => {
               width={500}
               height={300}
               className="w-full"
+              priority 
             />
           </motion.div>
         </motion.div>

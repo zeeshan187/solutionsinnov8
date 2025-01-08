@@ -14,10 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Solutions Innov8",
-  description: "Created by Solutions Innov8",
-};
+
 
 export default function RootLayout({ children }) {
   return (
