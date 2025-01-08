@@ -70,7 +70,7 @@ const Navbar = () => {
   const handleServiceHover = (service) => {
     setCurrentService({ heading: service.heading, image: service.image });
   };
-
+  //  for desktop
   const servicesMenu = (
     <Menu
       className="bg-white shadow-md"
@@ -98,7 +98,6 @@ const Navbar = () => {
                 {services.map((service, index) => (
                   <Link href={service.link} className="w-full" key={service.id}>
                     <Button
-                      
                       className="text-left w-full"
                       onMouseEnter={() => handleServiceHover(service)}
                     >
@@ -114,6 +113,45 @@ const Navbar = () => {
       ]}
     />
   );
+  // for mobile
+const MobileservicesMenu = (
+  <Menu
+    className="bg-white w-full shadow-md h-full relative" // Added relative positioning for the cross button
+    items={[
+      {
+        label: (
+          <div className="flex w-full min-h-[300px] pt-4">
+            {/* Close Button */}
+            <Button
+              type="link"
+              onClick={() => setMenuOpen(false)} // Close the menu on click
+              className="absolute top-4 right-4 text-black text-2xl"
+            >
+              <RxCross2 />
+            </Button>
+
+            <div className="w-full flex flex-col space-y-2 px-4">
+              <h3 className="text-base md:text-xl font-semibold mb-3">
+                Services
+              </h3>
+              {services.map((service) => (
+                <Link href={service.link} className="w-full" key={service.id}>
+                  <Button
+                    className="text-left w-full"
+                    onMouseEnter={() => handleServiceHover(service)}
+                  >
+                    {service.name}
+                  </Button>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ),
+        key: "0",
+      },
+    ]}
+  />
+);
 
   const handleMenuItemClick = () => {
     setMenuOpen(false); // Hide menu after clicking a menu item
@@ -164,8 +202,10 @@ const Navbar = () => {
                 className="flex items-center hover:text-blue-500 "
                 onClick={(e) => e.preventDefault()}
               >
-                <span>Services</span> 
-                <span className=" pt-1 text-[12px]">{dropdownOpen ? <UpOutlined /> : <DownOutlined />}</span>
+                <span>Services</span>
+                <span className=" pt-1 text-[12px]">
+                  {dropdownOpen ? <UpOutlined /> : <DownOutlined />}
+                </span>
               </Link>
             </Dropdown>
             <Link href="/courses" className="hover:text-blue-500">
@@ -210,22 +250,25 @@ const Navbar = () => {
                 About
               </Link>
               <Dropdown
-                overlay={servicesMenu}
+                overlay={MobileservicesMenu}
                 trigger={["click"]}
                 onVisibleChange={(visible) => setDropdownOpen(visible)}
                 placement="bottomCenter"
                 overlayStyle={{
-                  width: "100%", // Full width dropdown in mobile view
+                  width: "100%",
+                  height: "100vh",
                 }}
               >
                 <Link
-                href="/services"
-                className="flex items-center hover:text-blue-500 "
-                onClick={(e) => e.preventDefault()}
-              >
-                <span>Services</span> 
-                <span className=" pt-1 text-[12px]">{dropdownOpen ? <UpOutlined /> : <DownOutlined />}</span>
-              </Link>
+                  href="/services"
+                  className="text-xl mb-4 flex items-center hover:text-blue-500 "
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <span>Services</span>
+                  <span className=" pl-1 pt-1 text-[12px]">
+                    {dropdownOpen ? <UpOutlined /> : <DownOutlined />}
+                  </span>
+                </Link>
               </Dropdown>
               <Link
                 href="/courses"

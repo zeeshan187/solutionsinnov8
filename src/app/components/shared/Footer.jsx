@@ -2,6 +2,7 @@
 import { Row, Col } from "antd";
 import Image from "next/image";
 import Wrapper from "./Wrapper";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -23,18 +24,18 @@ export default function Footer() {
                 expert-led IT courses and excel in the tech industry.
               </p>
               <div className=" flex gap-4">
-                <a href="#" className="text-blue-500 hover:text-white">
+                <Link href="#" className="text-blue-500 hover:text-white">
                   <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="text-blue-400 hover:text-white">
+                </Link>
+                <Link href="#" className="text-blue-400 hover:text-white">
                   <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#" className="text-pink-600 hover:text-white">
+                </Link>
+                <Link href="#" className="text-pink-600 hover:text-white">
                   <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="text-blue-700 hover:text-white">
+                </Link>
+                <Link href="#" className="text-blue-700 hover:text-white">
                   <i className="fab fa-linkedin"></i>
-                </a>
+                </Link>
               </div>
             </Col>
 
@@ -43,34 +44,39 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-4">Our Services</h3>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/services/web-development" className="hover:text-white">
                     Web Development
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/services/app-development" className="hover:text-white">
                     App Development
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/services/graphic-designing" className="hover:text-white">
                     Graphic Design
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/services/ui-ux" className="hover:text-white">
                     UI/UX Design
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/services/seo" className="hover:text-white">
                     SEO Optimization
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/services/sqa" className="hover:text-white">
                     SQA Testing
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/digital-marketing" className="hover:text-white">
+                    Digital Marketing
+                  </Link>
                 </li>
               </ul>
             </Col>
@@ -80,29 +86,29 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/about" className="hover:text-white">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/courses" className="hover:text-white">
                     Courses
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/contact" className="hover:text-white">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="#" className="hover:text-white">
                     Careers
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link href="/privacy-policy" className="hover:text-white">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </Col>
