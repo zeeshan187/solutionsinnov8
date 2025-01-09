@@ -4,34 +4,35 @@ import { Row, Col } from "antd";
 import CountUp from "react-countup";
 import Wrapper from "../shared/Wrapper";
 
-const StatisticsSection = () => {
+const StatisticsSection = ({ loading }) => {
   const [isInView, setIsInView] = useState(false);
 
-  const checkIfInView = () => {
-    const element = document.getElementById("stats");
-    if (element) {
-      const position = element.getBoundingClientRect();
-      if (position.top <= window.innerHeight && position.bottom >= 0) {
-        setIsInView(true);
-      }
-    }
-  };
-
   useEffect(() => {
-    // Check on initial load
-    checkIfInView();
-    // Add scroll listener
-    window.addEventListener("scroll", checkIfInView);
-    return () => window.removeEventListener("scroll", checkIfInView);
-  }, []);
+    if (loading) return; // Skip logic until loader is hidden
+
+    const element = document.getElementById("stats");
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect(); // Stop observing once in view
+        }
+      },
+      {
+        threshold: 0.1, // Adjust visibility threshold as needed
+      }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [loading]);
 
   const stats = [
-    {
-      title: "Clients",
-      value: 65,
-      icon: "fas fa-users",
-      color: "bg-blue-500",
-    },
+    { title: "Clients", value: 65, icon: "fas fa-users", color: "bg-blue-500" },
     {
       title: "Projects",
       value: 500,

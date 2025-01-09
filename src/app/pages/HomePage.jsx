@@ -28,7 +28,7 @@ const HomePage = () => {
         <>
           <Navbar />
           <HeroSection />
-          <StatisticsSection />
+          <StatisticsSection loading={loading} />
           <AboutUsSection />
           <OurServices />
           <TestimonialsSection />
