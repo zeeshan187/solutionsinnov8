@@ -56,7 +56,6 @@ const CareersSection = () => {
             <div
               key={job.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center p-6 border-2 border-[#7B0B22]"
-              
             >
               <div className="text-4xl red_color mb-4">{job.icon}</div>
               <h3 className="text-xl font-semibold text-black">
