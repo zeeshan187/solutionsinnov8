@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Explore professional IT courses at Solutions Innov8. Learn web development, app development, SEO, UI/UX design, digital marketing, and more. Our expert instructors will guide you to success in the tech industry. Enroll now to enhance your skills!",
   keywords:
-    "IT courses, web development courses, app development courses, SEO courses, UI/UX design courses, digital marketing courses, online IT training, software development courses, tech education, Solutions Innov8 courses",
+    "IT courses in islamabad, web development courses in islamabad, web development courses in rawalpindi, web development courses in pakistan, graphic designing courses in islamabad,graphic designing courses in rawalpindi, graphic designing courses in pakistan, app development courses, SEO courses, UI/UX design courses, digital marketing courses, online IT training, software development courses, tech education, Solutions Innov8 courses, uiux courses in islamabad, uiux courses in rawalpindi, uiux courses in pakistan, ",
   author: "Solutions Innov8",
   robots: "index, follow",
   og: {
