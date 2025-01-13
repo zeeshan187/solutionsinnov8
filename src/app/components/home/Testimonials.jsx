@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
           <h3 className="text-xl red_color font-bold">TESTIMONIALS</h3>
           <h2 className="text-4xl font-bold">Look What Our Customers Say!</h2>
           <p className="text-lg text-gray-700">
-            Our clients trust us to deliver exceptional results. Hear what they have to say about our services.
+          Discover why our clients trust Solutions Innov8 for exceptional results and impactful solutions. Hear their stories and experiences working with us.
           </p>
           <div className="flex space-x-4">
             <button

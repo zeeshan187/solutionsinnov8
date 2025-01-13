@@ -41,15 +41,13 @@ const HeroSection = () => {
               variants={itemVariant}
               className="text-3xl lg:text-6xl lg:!leading-[70px] font-semibold text-center lg:text-start text-white"
             >
-              All-in-One Web, App, and Social Solutions
+              Empowering Ideas with Innovative IT Solutions
             </motion.h2>
             <motion.p
               variants={itemVariant}
               className=" text-center lg:text-start text-white"
             >
-              Receive guidance on digital strategy, direct access to design and
-              development experts, and a platform that’s successfully launched
-              over 100+ apps, websites, and social campaigns globally
+             At Solutions Innov8, we bring your ideas to life with cutting-edge IT services. From web and app development to branding, graphic design, and digital marketing, our team of experts delivers tailored solutions that drive results. Whether you're launching your first project or scaling your digital presence, we’re here to innovate, create, and elevate your vision.
             </motion.p>
             <motion.div
               variants={itemVariant}
