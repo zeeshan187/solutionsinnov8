@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation"; // To get dynamic route parameters
+import { useParams } from "next/navigation"; 
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import HeroSection from "../components/shared/HeroSection";

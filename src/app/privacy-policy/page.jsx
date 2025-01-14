@@ -13,15 +13,15 @@ export const metadata = {
     description:
       "Our Privacy Policy explains how we handle your personal information and data security, outlining our commitment to protecting your privacy.",
     type: "website",
-    url: "https://www.solutionsinnov8.com/privacy-policy", // Adjust with your correct URL
-    image: "/images/navbar/privacy-policy-banner.svg", // Replace with an appropriate image for the Privacy Policy page
+    url: "https://www.solutionsinnov8.com/privacy-policy", 
+    image: "/images/navbar/privacy-policy-banner.svg", 
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Solutions Innov8",
     description:
       "Learn how Solutions Innov8 protects your personal data and ensures privacy and security across our services.",
-    image: "/images/navbar/privacy-policy-banner.svg", // Replace with an appropriate image for the Privacy Policy page
+    image: "/images/navbar/privacy-policy-banner.svg", 
   },
 };
 export const viewport = "width=device-width, initial-scale=1";

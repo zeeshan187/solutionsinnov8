@@ -14,14 +14,14 @@ export const metadata = {
       "Learn about Solutions Innov8, a trusted IT solutions provider. We specialize in web development, app development, graphic design, UI/UX, SEO, SQA, and digital marketing. Discover our mission to empower businesses with cutting-edge technology.",
     type: "website",
     url: "https://www.solutionsinnov8.com/about",
-    image: "/images/navbar/about-us-banner.svg", // Replace with an appropriate image for the About page
+    image: "/images/navbar/about-us-banner.svg", 
   },
   twitter: {
     card: "summary_large_image",
     title: "About Solutions Innov8 | Leading IT Services Provider",
     description:
       "Learn about Solutions Innov8, a trusted IT solutions provider. We specialize in web development, app development, graphic design, UI/UX, SEO, SQA, and digital marketing. Discover our mission to empower businesses with cutting-edge technology.",
-    image: "/images/navbar/about-us-banner.svg", // Replace with an appropriate image for the About page
+    image: "/images/navbar/about-us-banner.svg", 
   },
 };
 export const viewport = "width=device-width, initial-scale=1";

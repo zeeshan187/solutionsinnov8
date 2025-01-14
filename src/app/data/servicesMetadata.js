@@ -9,14 +9,14 @@ const servicesMetadata = {
         title: "Web Development Services | Solutions Innov8",
         description:
           "Transform your ideas into a responsive, high-performance website with Solutions Innov8. Our expert web developers specialize in creating custom web solutions that deliver results.",
-        image: "/images/services/web-development.jpg", // Replace with an appropriate image
+        image: "/images/services/web-development.jpg", 
       },
       twitter: {
         card: "summary_large_image",
         title: "Web Development Services | Solutions Innov8",
         description:
           "Transform your ideas into a responsive, high-performance website with Solutions Innov8. Our expert web developers specialize in creating custom web solutions that deliver results.",
-        image: "/images/services/web-development.jpg", // Replace with an appropriate image
+        image: "/images/services/web-development.jpg", 
       },
     },
     "app-development": {
@@ -29,14 +29,14 @@ const servicesMetadata = {
         title: "App Development Services | Solutions Innov8",
         description:
           "Bring your mobile app ideas to life with Solutions Innov8. We specialize in creating custom mobile applications that are user-friendly, feature-rich, and scalable.",
-        image: "/images/services/app-development.jpg", // Replace with an appropriate image
+        image: "/images/services/app-development.jpg",
       },
       twitter: {
         card: "summary_large_image",
         title: "App Development Services | Solutions Innov8",
         description:
           "Bring your mobile app ideas to life with Solutions Innov8. We specialize in creating custom mobile applications that are user-friendly, feature-rich, and scalable.",
-        image: "/images/services/app-development.jpg", // Replace with an appropriate image
+        image: "/images/services/app-development.jpg", 
       },
     },
     "graphic-designing": {
@@ -49,7 +49,7 @@ const servicesMetadata = {
         title: "Graphic Design Services | Solutions Innov8",
         description:
           "Enhance your brand’s visual identity with Solutions Innov8’s graphic design services. From logos to marketing materials, our designers create stunning graphics that captivate your audience.",
-        image: "/images/services/graphic-design.jpg", // Replace with an appropriate image
+        image: "/images/services/graphic-design.jpg",
       },
       twitter: {
         card: "summary_large_image",
@@ -69,14 +69,14 @@ const servicesMetadata = {
         title: "UI/UX Design Services | Solutions Innov8",
         description:
           "Create seamless user experiences and visually appealing user interfaces with Solutions Innov8. Our UI/UX design services ensure your product is both functional and beautiful.",
-        image: "/images/services/uiux-design.jpg", // Replace with an appropriate image
+        image: "/images/services/uiux-design.jpg", 
       },
       twitter: {
         card: "summary_large_image",
         title: "UI/UX Design Services | Solutions Innov8",
         description:
           "Create seamless user experiences and visually appealing user interfaces with Solutions Innov8. Our UI/UX design services ensure your product is both functional and beautiful.",
-        image: "/images/services/uiux-design.jpg", // Replace with an appropriate image
+        image: "/images/services/uiux-design.jpg", 
       },
     },
     "seo": {
@@ -89,14 +89,14 @@ const servicesMetadata = {
         title: "SEO Services | Solutions Innov8",
         description:
           "Improve your search engine rankings with Solutions Innov8's expert SEO services. We use proven strategies to help your website rank higher and attract more visitors.",
-        image: "/images/services/seo.jpg", // Replace with an appropriate image
+        image: "/images/services/seo.jpg",
       },
       twitter: {
         card: "summary_large_image",
         title: "SEO Services | Solutions Innov8",
         description:
           "Improve your search engine rankings with Solutions Innov8's expert SEO services. We use proven strategies to help your website rank higher and attract more visitors.",
-        image: "/images/services/seo.jpg", // Replace with an appropriate image
+        image: "/images/services/seo.jpg",
       },
     },
     "digital-marketing": {
@@ -109,14 +109,14 @@ const servicesMetadata = {
         title: "Digital Marketing Services | Solutions Innov8",
         description:
           "Grow your online presence with Solutions Innov8’s digital marketing services. From social media marketing to PPC campaigns, we help you attract, engage, and convert customers.",
-        image: "/images/services/digital-marketing.jpg", // Replace with an appropriate image
+        image: "/images/services/digital-marketing.jpg",
       },
       twitter: {
         card: "summary_large_image",
         title: "Digital Marketing Services | Solutions Innov8",
         description:
           "Grow your online presence with Solutions Innov8’s digital marketing services. From social media marketing to PPC campaigns, we help you attract, engage, and convert customers.",
-        image: "/images/services/digital-marketing.jpg", // Replace with an appropriate image
+        image: "/images/services/digital-marketing.jpg",
       },
     },
     "sqa": {
@@ -129,17 +129,16 @@ const servicesMetadata = {
         title: "Software Quality Assurance Services | Solutions Innov8",
         description:
           "Ensure the quality and reliability of your software products with Solutions Innov8’s QA services. Our team tests and reviews your software to make sure it’s flawless.",
-        image: "/images/services/qa.jpg", // Replace with an appropriate image
+        image: "/images/services/qa.jpg", 
       },
       twitter: {
         card: "summary_large_image",
         title: "Software Quality Assurance Services | Solutions Innov8",
         description:
           "Ensure the quality and reliability of your software products with Solutions Innov8’s QA services. Our team tests and reviews your software to make sure it’s flawless.",
-        image: "/images/services/qa.jpg", // Replace with an appropriate image
+        image: "/images/services/qa.jpg",
       },
     },
-    // Add more services if needed
   };
   
   export default servicesMetadata;

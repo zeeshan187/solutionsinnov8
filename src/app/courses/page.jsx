@@ -14,14 +14,14 @@ export const metadata = {
       "Explore professional IT courses at Solutions Innov8. Learn web development, app development, SEO, UI/UX design, digital marketing, and more. Our expert instructors will guide you to success in the tech industry. Enroll now to enhance your skills!",
     type: "website",
     url: "https://www.solutionsinnov8.com/courses",
-    image: "/images/navbar/courses-banner.svg", // Replace with an appropriate image for the Courses page
+    image: "/images/navbar/courses-banner.svg",
   },
   twitter: {
     card: "summary_large_image",
     title: "IT Courses by Solutions Innov8 | Web Development, App Development, SEO & More",
     description:
       "Explore professional IT courses at Solutions Innov8. Learn web development, app development, SEO, UI/UX design, digital marketing, and more. Our expert instructors will guide you to success in the tech industry. Enroll now to enhance your skills!",
-    image: "/images/navbar/courses-banner.svg", // Replace with an appropriate image for the Courses page
+    image: "/images/navbar/courses-banner.svg",
   },
 };
 export const viewport = "width=device-width, initial-scale=1";

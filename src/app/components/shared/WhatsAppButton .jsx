@@ -1,4 +1,3 @@
-// components/WhatsAppButton.jsx
 import { WhatsAppOutlined } from '@ant-design/icons';
 
 export default function WhatsAppButton() {

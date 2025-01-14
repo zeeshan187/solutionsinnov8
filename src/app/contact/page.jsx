@@ -14,14 +14,14 @@ export const metadata = {
       "Have questions or need support? Contact Solutions Innov8, your trusted IT services provider. Reach out for inquiries about web development, app development, digital marketing, SEO, and more. Our team is here to help you with all your IT needs.",
     type: "website",
     url: "https://www.solutionsinnov8.com/contact",
-    image: "/images/navbar/contact-us-banner.svg", // Replace with an appropriate image for the Contact Us page
+    image: "/images/navbar/contact-us-banner.svg", 
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Solutions Innov8 | Get in Touch with Our IT Services Team",
     description:
       "Have questions or need support? Contact Solutions Innov8, your trusted IT services provider. Reach out for inquiries about web development, app development, digital marketing, SEO, and more. Our team is here to help you with all your IT needs.",
-    image: "/images/navbar/contact-us-banner.svg", // Replace with an appropriate image for the Contact Us page
+    image: "/images/navbar/contact-us-banner.svg", 
   },
 };
 export const viewport = "width=device-width, initial-scale=1";

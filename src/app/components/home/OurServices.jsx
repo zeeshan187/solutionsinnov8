@@ -9,7 +9,7 @@ import {
   FaBullhorn,
   FaCheckCircle,
   FaImage,
-} from "react-icons/fa"; // Example icons
+} from "react-icons/fa"; 
 import Wrapper from "../shared/Wrapper";
 import Link from "next/link";
 

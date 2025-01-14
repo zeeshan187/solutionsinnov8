@@ -70,7 +70,6 @@ const Navbar = () => {
   const handleServiceHover = (service) => {
     setCurrentService({ heading: service.heading, image: service.image });
   };
-  //  for desktop
   const servicesMenu = (
     <Menu
       className="bg-white shadow-md"
@@ -113,18 +112,16 @@ const Navbar = () => {
       ]}
     />
   );
-  // for mobile
 const MobileservicesMenu = (
   <Menu
-    className="bg-white w-full shadow-md h-full relative" // Added relative positioning for the cross button
+    className="bg-white w-full shadow-md h-full relative" 
     items={[
       {
         label: (
           <div className="flex w-full min-h-[300px] pt-4">
-            {/* Close Button */}
             <Button
               type="link"
-              onClick={() => setMenuOpen(false)} // Close the menu on click
+              onClick={() => setMenuOpen(false)}
               className="absolute top-4 right-4 text-black text-2xl"
             >
               <RxCross2 />
@@ -154,14 +151,13 @@ const MobileservicesMenu = (
 );
 
   const handleMenuItemClick = () => {
-    setMenuOpen(false); // Hide menu after clicking a menu item
+    setMenuOpen(false); 
   };
 
   return (
     <div className="fixed w-full top-0 px-3 py-4 bg-white shadow-md z-20">
       <Wrapper>
         <div className="flex items-center justify-between ">
-          {/* Logo */}
           <Link href="/" className="text-xl font-bold z-30">
             <Image
               src="/images/navbar/logo.svg"
@@ -178,8 +174,6 @@ const MobileservicesMenu = (
               className="flex md:hidden w-[50px]"
             />
           </Link>
-
-          {/* Center Menu (Desktop) */}
           <div className="hidden md:flex space-x-6 z-30">
             <Link href="/" className="hover:text-blue-500">
               Home
@@ -193,8 +187,8 @@ const MobileservicesMenu = (
               onVisibleChange={(visible) => setDropdownOpen(visible)}
               placement="bottom"
               overlayStyle={{
-                width: "50%", // Set the width of the dropdown
-                marginLeft: "25%", // Center the dropdown by applying margin
+                width: "50%", 
+                marginLeft: "25%",
               }}
             >
               <Link
@@ -216,12 +210,10 @@ const MobileservicesMenu = (
             </Link>
           </div>
 
-          {/* Right Button (Desktop) */}
           <Button className="hidden md:block bg_red_color text-base min-w-[150px] h-[50px] text-white font-semibold rounded-xl">
             Schedule Meeting
           </Button>
 
-          {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center z-30">
             <Button
               type="link"
@@ -232,7 +224,6 @@ const MobileservicesMenu = (
             </Button>
           </div>
 
-          {/* Mobile Menu (Full Screen) */}
           {menuOpen && (
             <div className=" flex md:hidden absolute top-[85px] left-0 w-full h-[calc(100vh-70px)] bg_red_color text-white shadow-2xl  flex-col items-center justify-start transition-all duration-300 ease-in-out z-20 pt-5">
               <Link
@@ -285,7 +276,6 @@ const MobileservicesMenu = (
                 Contact
               </Link>
 
-              {/* Schedule Meeting (Mobile) */}
               <Button
                 className="bg_red_color !text-base min-w-[150px] h-[50px] text-white font-semibold rounded-xl mt-4"
                 onClick={handleMenuItemClick}

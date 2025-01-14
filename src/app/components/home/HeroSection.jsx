@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Button } from "antd";
 
 const HeroSection = () => {
-  // Variants for animations
   const containerVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,7 +24,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#7B0B22] via-[#450087] to-[#170055] animate-gradient"></div>
 
       <Wrapper>
@@ -71,8 +69,6 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
           </div>
-
-          {/* Image Section with Parallax Effect */}
           <motion.div
             initial={{ y: 40 }}
             animate={{ y: [20, -20, 20]}}

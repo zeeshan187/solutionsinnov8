@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from "antd"; // Import Ant Design Button
+import { Button } from "antd";
 import {
   TeamOutlined,
   LaptopOutlined,
   ClockCircleOutlined,
   DollarCircleOutlined,
-} from "@ant-design/icons"; // Ant Design icons
+} from "@ant-design/icons"; 
 import Wrapper from "../shared/Wrapper";
 
 const jobs = [
@@ -41,7 +41,6 @@ const jobs = [
     type: "Contract",
     salary: "Negotiable",
   },
-  // Add more jobs here
 ];
 
 const CareersSection = () => {

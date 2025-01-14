@@ -9,29 +9,26 @@ const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Send email to your email address
     emailjs
       .sendForm(
-        "service_cw0g7vk", // Replace with your EmailJS service ID
-        "template_u9cim2r", // Replace with your admin template ID
+        "service_cw0g7vk", 
+        "template_u9cim2r", 
         formRef.current,
-        "MA9vkAuo_AU5cLa0q" // Replace with your EmailJS public key
+        "MA9vkAuo_AU5cLa0q" 
       )
       .then(
         (result) => {
           console.log("Email to admin sent successfully:", result.text);
-
-          // Send auto-response to the user
           const formData = new FormData(formRef.current);
           emailjs
             .send(
-              "service_cw0g7vk", // Replace with your EmailJS service ID
-              "template_ucwvu9n", // Replace with your user template ID
+              "service_cw0g7vk", 
+              "template_ucwvu9n", 
               {
                 user_name: formData.get("user_name"),
                 user_email: formData.get("user_email"),
               },
-              "MA9vkAuo_AU5cLa0q" // Replace with your EmailJS public key
+              "MA9vkAuo_AU5cLa0q" 
             )
             .then(
               (response) => {
@@ -74,8 +71,6 @@ const ContactUs = () => {
             </li>
           </ul>
         </div>
-
-        {/* Right Section */}
         <div className="p-8 md:p-12">
           <h2 className="text-3xl font-bold text-[#7A0B20] mb-6">
             Contact Us

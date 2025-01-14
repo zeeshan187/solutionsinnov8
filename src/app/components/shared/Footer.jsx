@@ -1,4 +1,3 @@
-// components/Footer.js
 import { Row, Col } from "antd";
 import Image from "next/image";
 import Wrapper from "./Wrapper";
@@ -10,7 +9,6 @@ export default function Footer() {
       <Wrapper>
         <div className="container mx-auto">
           <Row gutter={[16, 16]}>
-            {/* Company Info */}
             <Col xs={24} sm={12} md={8} className="flex flex-col gap-2">
               <Image
                 src="/images/navbar/footer-logo.svg"
@@ -38,8 +36,6 @@ export default function Footer() {
                 </Link>
               </div>
             </Col>
-
-            {/* Services */}
             <Col xs={24} sm={12} md={5}>
               <h3 className="text-lg font-bold mb-4">Our Services</h3>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -81,7 +77,6 @@ export default function Footer() {
               </ul>
             </Col>
 
-            {/* Quick Links */}
             <Col xs={24} sm={12} md={5}>
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -113,7 +108,6 @@ export default function Footer() {
               </ul>
             </Col>
 
-            {/* Contact Details */}
             <Col xs={24} sm={12} md={6}>
               <h3 className="text-lg font-bold mb-4">Contact Us</h3>
               <ul className="text-sm text-gray-400 space-y-2">

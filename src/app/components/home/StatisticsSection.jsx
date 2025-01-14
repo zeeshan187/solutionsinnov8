@@ -8,7 +8,7 @@ const StatisticsSection = ({ loading }) => {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    if (loading) return; // Skip logic until loader is hidden
+    if (loading) return; 
 
     const element = document.getElementById("stats");
     if (!element) return;
@@ -18,11 +18,11 @@ const StatisticsSection = ({ loading }) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect(); // Stop observing once in view
+          observer.disconnect(); 
         }
       },
       {
-        threshold: 0.1, // Adjust visibility threshold as needed
+        threshold: 0.1, 
       }
     );
 

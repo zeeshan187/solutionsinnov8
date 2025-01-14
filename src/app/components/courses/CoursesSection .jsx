@@ -1,12 +1,12 @@
 import React from "react";
-import { Button } from "antd"; // Import Ant Design Button
+import { Button } from "antd";
 import {
   CodeOutlined,
   AppstoreAddOutlined,
   AppstoreOutlined,
   EditOutlined,
   UserAddOutlined,
-} from "@ant-design/icons"; // Ant Design icons
+} from "@ant-design/icons"; 
 import Wrapper from "../shared/Wrapper";
 
 const courses = [
@@ -45,7 +45,6 @@ const courses = [
       "Learn to grow brands using SEO, social media, and content marketing.",
     icon: <UserAddOutlined />,
   },
-  // Add more courses here
 ];
 
 const CoursesSection = () => {
@@ -60,7 +59,7 @@ const CoursesSection = () => {
             <div
               key={course.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center p-6"
-              style={{ border: "2px solid #7B0B22" }} // Using your primary color for the border
+              style={{ border: "2px solid #7B0B22" }}
             >
               <div className="text-4xl text-[#7B0B22] mb-4">{course.icon}</div>
               <h3 className="text-xl font-semibold text-gray-800">

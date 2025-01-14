@@ -12,55 +12,55 @@ const testimonials = [
     name: "Joseph Smith",
     designation: "Startup Founder",
     review: "The team delivered an exceptional product that exceeded our expectations. Highly recommend their services!",
-    image: "/images/home/clients/client1.jpeg", // Male Image
+    image: "/images/home/clients/client1.jpeg",
   },
   {
     name: "Jane Smith",
     designation: "Marketing Manager, Digital Marketing Agency",
     review: "Outstanding experience! The developers were knowledgeable and delivered quality work on time.",
-    image: "/images/home/clients/client4.webp", // Female Image
+    image: "/images/home/clients/client4.webp", 
   },
   {
     name: "Michael Johnson",
     designation: "Startup Founder",
     review: "Professional, reliable, and creative. They made the entire process seamless. I couldn't have asked for a better experience.",
-    image: "/images/home/clients/client2.jpeg", // Male Image
+    image: "/images/home/clients/client2.jpeg", 
   },
   {
     name: "Sophia Brown",
     designation: "IT Director, Startup Enterprises",
     review: "Great attention to detail and excellent communication throughout the project. The final result was better than we expected.",
-    image: "/images/home/clients/client3.webp", // Female Image
+    image: "/images/home/clients/client3.webp", 
   },
   {
     name: "Roman",
     designation: "CEO, AlpinX Enterprises Ltd.",
     review: "Fantastic service and results. They truly understood our vision and delivered on time. A top-notch team!",
-    image: "/images/home/clients/client5.webp", // Male Image
+    image: "/images/home/clients/client5.webp", 
   },
   {
     name: "Emma Williams",
     designation: "Creative Director, PixelArt Studios",
     review: "A talented team that combines technical expertise with creative insight. I highly recommend their work to anyone in need of a skilled team.",
-    image: "/images/home/clients/client8.jpeg", // Female Image
+    image: "/images/home/clients/client8.jpeg", 
   },
   {
     name: "Oliver Harris",
     designation: "CTO, InnovateHub Solutions",
     review: "The collaboration was seamless, and the results were beyond our expectations. Great job, team!",
-    image: "/images/home/clients/client6.webp", // Male Image
+    image: "/images/home/clients/client6.webp", 
   },
   {
     name: "Liam Wilson",
     designation: "Freelance Consultant, Digital Strategies",
     review: "The team was extremely professional and responsive. A pleasure to work with! The outcome was exactly what we envisioned.",
-    image: "/images/home/clients/client7.webp", // Male Image
+    image: "/images/home/clients/client7.webp", 
   },
   {
     name: "Ram Chella",
     designation: "HR Head, BrightFuture Technologies",
     review: "Their ability to understand our requirements and translate them into reality is outstanding. Highly professional and reliable team.",
-    image: "/images/home/clients/client5.webp", // Female Image
+    image: "/images/home/clients/client5.webp", 
   },
 ];
 
@@ -80,7 +80,6 @@ const TestimonialsSection = () => {
     <div className="bg-gradient-to-r from-blue-50 to-gray-50 py-5 lg:py-16">
       <Wrapper>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-40 items-center">
-        {/* Left Block */}
         <div className="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-start">
           <h3 className="text-xl red_color font-bold">TESTIMONIALS</h3>
           <h2 className="text-4xl font-bold">Look What Our Customers Say!</h2>
@@ -102,8 +101,6 @@ const TestimonialsSection = () => {
             </button>
           </div>
         </div>
-
-        {/* Right Block */}
         <div>
           <Carousel
             autoplay
