@@ -16,7 +16,7 @@ const HeroSection = ({ title, subtitle }) => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-[#7B0B22] via-[#7B0B22cc] to-transparent"></div>
 
-      <div className="relative text-center max-w-5xl px-6 animate-fade-in">
+      <div className="relative text-center max-w-5xl px-6 animate-fade-in flex flex-col gap-[2vh] items-center">
         <h1 className="text-3xl mt-3 md:mt-0 md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
           {title}
         </h1>
