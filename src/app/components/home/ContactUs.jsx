@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -8,21 +8,44 @@ const ContactUs = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Send email to your email address
     emailjs
       .sendForm(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
+        "service_cw0g7vk", // Replace with your EmailJS service ID
+        "template_u9cim2r", // Replace with your admin template ID
         formRef.current,
-        "your_public_key" // Replace with your EmailJS public key
+        "MA9vkAuo_AU5cLa0q" // Replace with your EmailJS public key
       )
       .then(
         (result) => {
-          console.log(result.text);
-          setIsSent(true);
-          e.target.reset();
+          console.log("Email to admin sent successfully:", result.text);
+
+          // Send auto-response to the user
+          const formData = new FormData(formRef.current);
+          emailjs
+            .send(
+              "service_cw0g7vk", // Replace with your EmailJS service ID
+              "template_ucwvu9n", // Replace with your user template ID
+              {
+                user_name: formData.get("user_name"),
+                user_email: formData.get("user_email"),
+              },
+              "MA9vkAuo_AU5cLa0q" // Replace with your EmailJS public key
+            )
+            .then(
+              (response) => {
+                console.log("Auto-response email sent successfully:", response.text);
+                setIsSent(true);
+                e.target.reset();
+              },
+              (error) => {
+                console.error("Failed to send auto-response email:", error.text);
+              }
+            );
         },
         (error) => {
-          console.error(error.text);
+          console.error("Failed to send email to admin:", error.text);
         }
       );
   };
