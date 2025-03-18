@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const HeroSection = ({ title, subtitle }) => {
   return (
     <div className="relative bg-[#7B0B22] text-white min-h-[50vh] md:min-h-[70vh] py-5 md:py-0 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 opacity-30">
         <Image
-          src="/images/navbar/service.svg" 
+          src="/images/navbar/service.svg"
           alt="Hero Background"
           layout="fill"
           objectFit="cover"
@@ -21,9 +21,7 @@ const HeroSection = ({ title, subtitle }) => {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg md:text-2xl mb-6 text-gray-200">
-            {subtitle}
-          </p>
+          <p className="text-lg md:text-2xl mb-6 text-gray-200">{subtitle}</p>
         )}
         <button className="bg-white text-[#7B0B22] px-8 py-3 rounded-md text-lg font-semibold shadow-md transition-transform transform hover:scale-105 animate-button-fade">
           Get Started
