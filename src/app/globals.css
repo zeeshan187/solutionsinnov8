@@ -4,6 +4,11 @@
 
 *{
   font-family: 'Poppins', sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Big Shoulders", sans-serif; */
+}
+h1, h2 ,h3 , h4, h5, h6, h2 span, button span, button{
+  font-family: "Big Shoulders", sans-serif !important;
 }
 .red_color{
   color: #7B0B22;

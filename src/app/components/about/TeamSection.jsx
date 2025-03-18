@@ -5,21 +5,21 @@ import Wrapper from "../shared/Wrapper";
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "Frontend Developer",
-    description: "Passionate about crafting elegant user interfaces.",
+    name: "Malik Zeeshan",
+    role: "CEO & Founder",
+    description: "Visionary leader with a passion for innovation, driving the company toward excellence in technology and user experience.",
     image: "/images/about/ceo.jpg",
     social: {
-      linkedin: "https://linkedin.com/in/johndoe",
+      linkedin: "https://www.linkedin.com/in/thezeeshantahir/",
       github: "https://github.com/johndoe",
       twitter: "https://twitter.com/johndoe",
     },
   },
   {
-    name: "Jane Smith",
-    role: "Backend Developer",
-    description: "Building robust and scalable backend systems.",
-    image: "/images/about/ceo.jpg",
+    name: "Dua Kamran",
+    role: "CTO & Co-Founder",
+    description: "A strategic thinker dedicated to building scalable and high-performing backend systems that power seamless digital experiences.",
+    image: "/images/about/dua.png",
     social: {
       linkedin: "https://linkedin.com/in/janesmith",
       github: "https://github.com/janesmith",
@@ -27,10 +27,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Jane Smith",
-    role: "Backend Developer",
-    description: "Building robust and scalable backend systems.",
-    image: "/images/about/ceo.jpg",
+    name: "Zaheer Ul Din Babaer",
+    role: "Director",
+    description: "A dynamic leader with expertise in backend architecture, ensuring the company delivers robust and secure software solutions.",
+    image: "/images/about/zaheer.jpg",
     social: {
       linkedin: "https://linkedin.com/in/janesmith",
       github: "https://github.com/janesmith",
@@ -74,7 +74,7 @@ const TeamSection = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-40 h-40 rounded-full border-4 border-[#7B0B22] shadow-2xl transition-transform transform hover:scale-105"
+                className="w-40 h-40 object-cover object-top rounded-full border-4 border-[#7B0B22] shadow-2xl transition-transform transform hover:scale-105 "
               />
             </div>
 

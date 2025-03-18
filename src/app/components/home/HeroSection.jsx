@@ -34,18 +34,18 @@ const HeroSection = () => {
           className="flex flex-col lg:flex-row items-center min-h-[calc(100vh-85px)] w-full justify-between relative z-10"
         >
           {/* Text Section */}
-          <div className="flex flex-col w-full lg:w-[45%] gap-5 mt-5 lg:mt-0">
+          <div className="flex flex-col w-full lg:w-[45%] gap-3 mt-5 lg:mt-0">
             <motion.h2
               variants={itemVariant}
-              className="text-3xl lg:text-6xl lg:!leading-[70px] font-semibold text-center lg:text-start text-white"
+              className="text-3xl lg:text-5xl font-semibold text-center lg:text-start text-white headings"
             >
-              Empowering Ideas with Innovative IT Solutions
+              Build Your Dream Website – Get a Free Quote Now!
             </motion.h2>
             <motion.p
               variants={itemVariant}
-              className=" text-center lg:text-start text-white"
+              className=" text-center lg:text-start text-white text-base"
             >
-             At Solutions Innov8, we bring your ideas to life with cutting-edge IT services. From web and app development to branding, graphic design, and digital marketing, our team of experts delivers tailored solutions that drive results. Whether you're launching your first project or scaling your digital presence, we’re here to innovate, create, and elevate your vision.
+              At Solutions Innov8, we bring your ideas to life with cutting-edge IT services. From web and app development to branding, graphic design, and digital marketing, our team of experts delivers tailored solutions that drive results. Whether you're launching your first project or scaling your digital presence, we’re here to innovate, create, and elevate your vision.
             </motion.p>
             <motion.div
               variants={itemVariant}
@@ -55,23 +55,23 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-white text-white font-semibold bg-transparent">
-                  Explore Our Services
+                <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-white text-white font-semibold bg-transparent text-base md:text-2xl">
+                  See Our Work
                 </Button>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-white font-semibold text-white bg-[#7B0B22]">
-                  Get Started Today
+                <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-white font-semibold text-white bg-[#7B0B22] text-base md:text-2xl">
+                  Get a Free Quote
                 </Button>
               </motion.div>
             </motion.div>
           </div>
           <motion.div
             initial={{ y: 40 }}
-            animate={{ y: [20, -20, 20]}}
+            animate={{ y: [20, -20, 20] }}
             transition={{
               duration: 3,
               ease: "easeInOut",
@@ -86,7 +86,7 @@ const HeroSection = () => {
               width={500}
               height={300}
               className="w-full"
-              priority 
+              priority
             />
           </motion.div>
         </motion.div>

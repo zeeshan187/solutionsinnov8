@@ -210,7 +210,7 @@ const MobileservicesMenu = (
             </Link>
           </div>
 
-          <Button className="hidden md:block bg_red_color text-base min-w-[150px] h-[50px] text-white font-semibold rounded-xl">
+          <Button className="hidden md:block bg_red_color text-base md:text-xl min-w-[150px] h-[50px] text-white font-medium rounded-3xl px-5">
             Schedule Meeting
           </Button>
 

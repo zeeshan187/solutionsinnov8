@@ -34,10 +34,10 @@ const AboutUsSection = () => {
               transformation and achieving success.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-5 mt-3 justify-center lg:justify-start">
-              <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-[#7B0B22] text-white font-semibold bg_red_color">
+              <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-[#7B0B22] text-white font-semibold bg_red_color text-base md:text-2xl">
                 Explore Our Services
               </Button>
-              <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-[#7B0B22] font-semibold text-[#7B0B22] ">
+              <Button className="min-w-[230px] h-[60px] rounded-full border-2 border-[#7B0B22] font-semibold text-[#7B0B22] text-base md:text-2xl">
                 Get Started Today
               </Button>
             </div>
