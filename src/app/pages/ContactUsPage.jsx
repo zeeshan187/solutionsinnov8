@@ -14,11 +14,11 @@ const ContactUsPage = () => {
     window.scrollTo(0, 0);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   return (
-    <div className="mt-[83px]">
+    <div className="mt-[70px] md:mt-[83px]">
       {loading ? (
         <Loader />
       ) : (

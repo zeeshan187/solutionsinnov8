@@ -25,16 +25,14 @@ const HeroSection = () => {
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-[#7B0B22] via-[#450087] to-[#170055] animate-gradient"></div>
-
       <Wrapper>
         <motion.div
           initial="hidden"
           animate="visible"
           variants={containerVariant}
-          className="flex flex-col lg:flex-row items-center min-h-[calc(100vh-85px)] w-full justify-between relative z-10"
+          className="flex flex-col lg:flex-row items-center min-h-[calc(100vh-85px)] w-full justify-between relative z-10 pb-[30px] pt-[20px] md:py-0"
         >
-          {/* Text Section */}
-          <div className="flex flex-col w-full lg:w-[45%] gap-3 mt-5 lg:mt-0">
+          <div className="flex flex-col w-full lg:w-[45%] gap-3 mt-5 lg:mt-0 order-2 md:order-1">
             <motion.h2
               variants={itemVariant}
               className="text-3xl lg:text-5xl font-semibold text-center lg:text-start text-white headings"
@@ -78,7 +76,7 @@ const HeroSection = () => {
               repeat: Infinity,
             }}
             whileHover={{ scale: 1.05 }}
-            className="w-full lg:w-[50%]"
+            className="w-full lg:w-[50%] order-1 md:order-2"
           >
             <Image
               src="/images/home/hero-img.svg"

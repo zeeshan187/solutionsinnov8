@@ -1,12 +1,14 @@
 "use client";
 import { Menu, Dropdown, Button } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Wrapper from "./Wrapper";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import Link from "next/link";
+
+
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -97,7 +99,7 @@ const Navbar = () => {
                 {services.map((service, index) => (
                   <Link href={service.link} className="w-full" key={service.id}>
                     <Button
-                      className="text-left w-full"
+                      className="text-left w-full md:text-lg"
                       onMouseEnter={() => handleServiceHover(service)}
                     >
                       {service.name}
@@ -112,13 +114,12 @@ const Navbar = () => {
       ]}
     />
   );
-const MobileservicesMenu = (
-  <Menu
-    className="bg-white w-full shadow-md h-full relative" 
-    items={[
+  const MobileservicesMenu = {
+    items: [
       {
+        key: "0",
         label: (
-          <div className="flex w-full min-h-[300px] pt-4">
+          <div className="flex w-full h-[100vh] pt-4 overflow-hidden md:hidden">
             <Button
               type="link"
               onClick={() => setMenuOpen(false)}
@@ -126,15 +127,20 @@ const MobileservicesMenu = (
             >
               <RxCross2 />
             </Button>
-
-            <div className="w-full flex flex-col space-y-2 px-4">
+  
+            <div className="w-full flex flex-col space-y-2 px-4 ">
               <h3 className="text-base md:text-xl font-semibold mb-3">
                 Services
               </h3>
               {services.map((service) => (
-                <Link href={service.link} className="w-full" key={service.id}>
+                <Link
+                  href={service.link}
+                  className="w-full"
+                  key={service.id}
+                  onClick={() => setMenuOpen(false)}
+                >
                   <Button
-                    className="text-left w-full"
+                    className="text-left w-full md:text-lg"
                     onMouseEnter={() => handleServiceHover(service)}
                   >
                     {service.name}
@@ -144,20 +150,20 @@ const MobileservicesMenu = (
             </div>
           </div>
         ),
-        key: "0",
       },
-    ]}
-  />
-);
+    ],
+  };
+  
+
 
   const handleMenuItemClick = () => {
     setMenuOpen(false); 
   };
 
   return (
-    <div className="fixed w-full top-0 px-3 py-4 bg-white shadow-md z-20">
+    <div className="fixed top-0 px-3 py-4 bg-white shadow-md z-20 h-[70px] md:h-[83px] flex items-center w-full">
       <Wrapper>
-        <div className="flex items-center justify-between ">
+        <div className="flex items-center justify-between w-full">
           <Link href="/" className="text-xl font-bold z-30">
             <Image
               src="/images/navbar/logo.svg"
@@ -169,16 +175,16 @@ const MobileservicesMenu = (
             <Image
               src="/images/navbar/small-logo.svg"
               alt="logo img"
-              width={200}
+              width={150}
               height={50}
-              className="flex md:hidden w-[50px]"
+              className="flex md:hidden w-[45px]"
             />
           </Link>
           <div className="hidden md:flex space-x-6 z-30">
-            <Link href="/" className="hover:text-blue-500">
+            <Link href="/" className="hover:text-blue-500 ">
               Home
             </Link>
-            <Link href="/about" className="hover:text-blue-500">
+            <Link href="/about" className="hover:text-blue-500 ">
               About
             </Link>
             <Dropdown
@@ -193,7 +199,7 @@ const MobileservicesMenu = (
             >
               <Link
                 href="/services"
-                className="flex items-center hover:text-blue-500 "
+                className="flex items-center hover:text-blue-500  "
                 onClick={(e) => e.preventDefault()}
               >
                 <span>Services</span>
@@ -202,11 +208,14 @@ const MobileservicesMenu = (
                 </span>
               </Link>
             </Dropdown>
-            <Link href="/courses" className="hover:text-blue-500">
+            <Link href="/courses" className="hover:text-blue-500 ">
               Courses
             </Link>
-            <Link href="/contact" className="hover:text-blue-500">
+            <Link href="/contact" className="hover:text-blue-500 ">
               Contact
+            </Link>
+            <Link href="/portfolio" className="hover:text-blue-500 ">
+              Portfolio
             </Link>
           </div>
 
@@ -225,23 +234,23 @@ const MobileservicesMenu = (
           </div>
 
           {menuOpen && (
-            <div className=" flex md:hidden absolute top-[85px] left-0 w-full h-[calc(100vh-70px)] bg_red_color text-white shadow-2xl  flex-col items-center justify-start transition-all duration-300 ease-in-out z-20 pt-5">
+            <div className="flex md:hidden absolute top-[71px]  left-0 w-full h-[calc(100vh-70px)] bg_red_color text-white shadow-2xl  flex-col items-center justify-start transition-all duration-300 ease-in-out z-20 pt-5">
               <Link
                 href="/"
-                className="text-xl mb-4 hover:text-blue-500"
+                className="text-xl mb-4 hover:text-blue-500 border border-white w-[80%] text-center h-[40px] flex items-center justify-center rounded-lg "
                 onClick={handleMenuItemClick}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-xl mb-4 hover:text-blue-500"
+                className="text-xl mb-4 hover:text-blue-500 border border-white w-[80%] text-center h-[40px] flex items-center justify-center rounded-lg "
                 onClick={handleMenuItemClick}
               >
                 About
               </Link>
               <Dropdown
-                overlay={MobileservicesMenu}
+                menu={MobileservicesMenu}
                 trigger={["click"]}
                 onVisibleChange={(visible) => setDropdownOpen(visible)}
                 placement="bottomCenter"
@@ -252,7 +261,7 @@ const MobileservicesMenu = (
               >
                 <Link
                   href="/services"
-                  className="text-xl mb-4 flex items-center hover:text-blue-500 "
+                  className="text-xl mb-4 hover:text-blue-500 border border-white w-[80%] text-center h-[40px] flex items-center justify-center rounded-lg  "
                   onClick={(e) => e.preventDefault()}
                 >
                   <span>Services</span>
@@ -263,21 +272,27 @@ const MobileservicesMenu = (
               </Dropdown>
               <Link
                 href="/courses"
-                className="text-xl mb-4 hover:text-blue-500"
+                className="text-xl mb-4 hover:text-blue-500 border border-white w-[80%] text-center h-[40px] flex items-center justify-center rounded-lg "
                 onClick={handleMenuItemClick}
               >
                 Courses
               </Link>
               <Link
                 href="/contact"
-                className="text-xl mb-4 hover:text-blue-500"
+                className="text-xl mb-4 hover:text-blue-500 border border-white w-[80%] text-center h-[40px] flex items-center justify-center rounded-lg "
                 onClick={handleMenuItemClick}
               >
                 Contact
               </Link>
-
+              <Link
+                href="/contact"
+                className="text-xl mb-4 hover:text-blue-500 border border-white w-[80%] text-center h-[40px] flex items-center justify-center rounded-lg "
+                onClick={handleMenuItemClick}
+              >
+                Portfolio
+              </Link>
               <Button
-                className="bg_red_color !text-base min-w-[150px] h-[50px] text-white font-semibold rounded-xl mt-4"
+                className="bg_red_color text-2xl w-[80%] h-[50px] text-white font-semibold rounded-xl mt-4"
                 onClick={handleMenuItemClick}
               >
                 Schedule Meeting

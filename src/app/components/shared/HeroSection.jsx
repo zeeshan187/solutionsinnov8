@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = ({ title, subtitle }) => {
   return (
-    <div className="relative bg-[#7B0B22] text-white min-h-[50vh] md:min-h-[70vh] py-5 md:py-0 flex items-center justify-center overflow-hidden">
+    <div className="relative bg-[#7B0B22] text-white min-h-[280px] md:min-h-[70vh] py-5 md:py-0 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 opacity-30">
         <Image
           src="/images/navbar/service.svg"
